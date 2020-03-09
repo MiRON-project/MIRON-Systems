@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This script is run prior to deployment of component ComponentWebotsLidar
+# This script is run prior to deployment of component Tiago
 # The working directory of this script is the deployment project folder.
 #
 
@@ -22,7 +22,7 @@
 #--------------------------------------------------------------------------
 
 # uncomment to enable predeploy script delivered by component
-source $REFERENCED_PROJECT_ComponentWebotsLidar/smartsoft/src/predeploy.sh
+source $REFERENCED_PROJECT_ComponentWebotsRobot/smartsoft/src/predeploy.sh
 
 # Add SmartSoft libraries that shall be deployed to the target device where this
 # component is to be deployed.

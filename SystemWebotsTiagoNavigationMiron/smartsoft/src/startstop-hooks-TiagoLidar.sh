@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Start-Stop-Hooks for component ComponentWebotsLidar
+# Start-Stop-Hooks for component TiagoLidar
 #
 # This script provides methods to call custom commands pre/post of
 # starting/stoping the component during launch on the device.

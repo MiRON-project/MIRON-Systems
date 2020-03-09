@@ -11,7 +11,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	{
 		RequiredService kBQueryClient
 	}
-	ComponentInstance ComponentWebotsLidar instantiates ComponentWebotsLidar
+	ComponentInstance TiagoLidar instantiates ComponentWebotsLidar
 	{
 		RequiredService BaseStateServiceIn
 		ProvidedService LaserServiceOut
@@ -24,7 +24,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		RequiredService NavVelSendClient
 	    ParameterStructInstance SystemWebotsTiagoNavigationMiron.SmartCdlServer
 	}
-	ComponentInstance ComponentWebotsRobot instantiates ComponentWebotsRobot
+	ComponentInstance Tiago instantiates ComponentWebotsRobot
 	{
 		ProvidedService BaseStateServiceOut
 		ProvidedService BatteryEventServiceOut
@@ -53,16 +53,16 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	{
 	}
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
-	Connection SmartCdlServer.LaserClient -> ComponentWebotsLidar.LaserServiceOut
-	Connection ComponentWebotsLidar.BaseStateServiceIn ->  ComponentWebotsRobot.BaseStateServiceOut
-	Connection SmartCdlServer.NavVelSendClient ->  ComponentWebotsRobot.NavigationVelocityServiceIn
-	Connection SmartAmcl.LocalizationUpdateServiceOut ->  ComponentWebotsRobot.LocalizationUpdateServiceIn
-	Connection SmartAmcl.LaserServiceIn -> ComponentWebotsLidar.LaserServiceOut
-	Connection SmartMapperGridMap.LaserServiceIn -> ComponentWebotsLidar.LaserServiceOut
+	Connection SmartCdlServer.LaserClient -> TiagoLidar.LaserServiceOut
+	Connection TiagoLidar.BaseStateServiceIn ->  Tiago.BaseStateServiceOut
+	Connection SmartCdlServer.NavVelSendClient ->  Tiago.NavigationVelocityServiceIn
+	Connection SmartAmcl.LocalizationUpdateServiceOut ->  Tiago.LocalizationUpdateServiceIn
+	Connection SmartAmcl.LaserServiceIn -> TiagoLidar.LaserServiceOut
+	Connection SmartMapperGridMap.LaserServiceIn -> TiagoLidar.LaserServiceOut
 	Connection SmartPlannerBreadthFirstSearch.CurMapClient -> SmartMapperGridMap.CurrMapOut
-	Connection SmartPlannerBreadthFirstSearch.BaseStateClient ->  ComponentWebotsRobot.BaseStateServiceOut
+	Connection SmartPlannerBreadthFirstSearch.BaseStateClient ->  Tiago.BaseStateServiceOut
 	Connection SmartCdlServer.PlannerClient -> SmartPlannerBreadthFirstSearch.PlannerGoalServer
-	Connection SmartCdlServer.BaseStateClient ->  ComponentWebotsRobot.BaseStateServiceOut
+	Connection SmartCdlServer.BaseStateClient ->  Tiago.BaseStateServiceOut
 	
 	
 	BehaviorTaskRef NavTasks
