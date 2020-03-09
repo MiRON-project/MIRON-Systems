@@ -5,3 +5,6 @@ datasheet-gen/
 src-gen/
 __pycache__/
 /*/bin/
+.project
+.cproject
+.classpath
