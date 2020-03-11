@@ -1,0 +1,33 @@
+SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
+{
+	ComponentInstance ComponentWebots instantiates ComponentWebots
+	{
+	}
+	ComponentInstance TiagoCameraRecognition instantiates ComponentWebotsCameraRecognition
+	{
+		RequiredService BaseStateServiceIn
+		ProvidedService RGBImagePushServiceOut
+	}
+	ComponentInstance Tiago instantiates ComponentWebotsRobot
+	{
+		ProvidedService BaseStateServiceOut
+		ProvidedService BatteryEventServiceOut
+		ProvidedService LocalizationUpdateServiceIn
+		ProvidedService NavigationVelocityServiceIn
+		ProvidedService BaseStateAnswerer
+	}
+	ComponentInstance TiagoObstacleAvoid instantiates ComponentLaserObstacleAvoid
+	{
+		RequiredService LaserServiceIn
+		RequiredService NavigationVelocityServiceOut
+	}
+	ComponentInstance TiagoLidar instantiates ComponentWebotsLidar
+	{
+		RequiredService BaseStateServiceIn
+		ProvidedService LaserServiceOut
+	}
+	Connection TiagoCameraRecognition.BaseStateServiceIn -> Tiago.BaseStateServiceOut
+	Connection TiagoLidar.BaseStateServiceIn -> Tiago.BaseStateServiceOut
+	Connection TiagoObstacleAvoid.LaserServiceIn -> TiagoLidar.LaserServiceOut
+	Connection TiagoObstacleAvoid.NavigationVelocityServiceOut -> Tiago.NavigationVelocityServiceIn
+}
