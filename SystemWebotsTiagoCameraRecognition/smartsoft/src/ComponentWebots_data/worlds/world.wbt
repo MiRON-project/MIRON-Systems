@@ -12,17 +12,29 @@ TexturedBackground {
 }
 TiagoIron {
   rotation 0.5773509358554485 0.5773509358554485 0.5773489358556708 -2.094395307179586
+  controller "<extern>"
   cameraSlot [
-    Camera {
+    Robot {
+      children [
+        Camera {
+          children [
+            Transform {
+              translation 0.107 0.0802 0
+            }
+          ]
+          name "camera 2D"
+          fieldOfView 1.0472
+          width 400
+          height 240
+          antiAliasing TRUE
+          recognition Recognition {
+            frameColor 0.929412 0.831373 0
+            frameThickness 3
+          }
+        }
+      ]
       name "camera"
-      fieldOfView 1.0472
-      width 256
-      height 128
-      antiAliasing TRUE
-      recognition Recognition {
-        frameColor 0.929412 0.831373 0
-        frameThickness 3
-      }
+      controller "<extern>"
     }
   ]
 }
