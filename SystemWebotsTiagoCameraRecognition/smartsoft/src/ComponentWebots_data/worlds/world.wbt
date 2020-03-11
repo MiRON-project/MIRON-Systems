@@ -17,11 +17,7 @@ TiagoIron {
     Robot {
       children [
         Camera {
-          children [
-            Transform {
-              translation 0.107 0.0802 0
-            }
-          ]
+          rotation 0 1 0 -1.57079632679
           name "camera 2D"
           fieldOfView 1.0472
           width 400
