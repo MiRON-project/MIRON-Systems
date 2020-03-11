@@ -1,0 +1,14 @@
+DeploymentModel SystemWebotsTiagoCameraRecognition using ComponentArchitecture SystemWebotsTiagoCameraRecognition
+{
+NamingService
+	{
+		deploy-to PC1 }
+	TargetPlatformReference PC1 using SystemWebotsTiagoCameraRecognition.PC1
+	{
+		UploadDirectory "/tmp"
+		NetworkInterface eth1
+	}
+	ComponentArtefact ComponentWebots deploy-to PC1
+	ComponentArtefact Tiago deploy-to PC1
+	ComponentArtefact TiagoCameraRecognition deploy-to PC1
+}

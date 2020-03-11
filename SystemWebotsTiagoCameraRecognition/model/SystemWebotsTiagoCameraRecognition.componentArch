@@ -1,0 +1,20 @@
+SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
+{
+ComponentInstance ComponentWebots instantiates ComponentWebots
+	{
+	}
+	ComponentInstance TiagoCameraRecognition instantiates ComponentWebotsCameraRecognition
+	{
+		RequiredService BaseStateServiceIn
+		ProvidedService RGBImagePushServiceOut
+	}
+	ComponentInstance Tiago instantiates ComponentWebotsRobot
+	{
+		ProvidedService BaseStateServiceOut
+		ProvidedService BatteryEventServiceOut
+		ProvidedService LocalizationUpdateServiceIn
+		ProvidedService NavigationVelocityServiceIn
+		ProvidedService BaseStateAnswerer
+	}
+Connection TiagoCameraRecognition.BaseStateServiceIn -> Tiago.BaseStateServiceOut
+}
