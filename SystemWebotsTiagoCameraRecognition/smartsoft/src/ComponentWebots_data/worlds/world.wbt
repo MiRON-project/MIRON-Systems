@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.7259861099678916 -0.6590060161538492 -0.19660935584737757 5.362622153709845
-  position 20.547893104132324 24.71034520747194 23.9597192466012
+  orientation 0.01990371891492952 -0.9594573526777179 -0.28115019182995593 3.1511380280906147
+  position -0.69619586028286 7.056098616446239 -9.179925271895328
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -19,7 +19,7 @@ TiagoIron {
         Camera {
           rotation 0 1 0 -1.57079632679
           name "camera 2D"
-          fieldOfView 1.0472
+          fieldOfView 1.309
           width 400
           height 240
           antiAliasing TRUE
@@ -33,22 +33,33 @@ TiagoIron {
       controller "<extern>"
     }
   ]
-}
-PottedTree {
-  translation 0.53 0 4
-  name "potted tree(4)"
+  lidarSlot [
+    InertialUnit {
+      rotation 0 -0.7071057811860166 0.7071077811853976 3.14159
+      name "inertial unit 2"
+    }
+    Robot {
+      children [
+        Lidar {
+          name "Hokuyo URG-04LX-UG01"
+          model "Hokuyo URG-04LX-UG01"
+          horizontalResolution 640
+          fieldOfView 3.49066
+          verticalFieldOfView 0.0062800449775112
+          numberOfLayers 1
+          minRange 0.1
+          maxRange 10
+          noise 0.02
+        }
+      ]
+      name "Lidar"
+      controller "<extern>"
+    }
+  ]
 }
 PottedTree {
   translation 7 0 4
   name "potted tree(5)"
-}
-PottedTree {
-  translation -2.63 0 -2.84
-  name "potted tree(6)"
-}
-PottedTree {
-  translation 4 0 -3
-  name "potted tree(7)"
 }
 PottedTree {
   translation 5.8 0 -3.3
@@ -204,8 +215,6 @@ Radiator {
   name "radiator(1)"
 }
 Door {
-  hidden translation_5 -0.29277307620383697 0 0.6132702755884379
-  hidden rotation_5 0 -1 0 1.5
   translation 5 0 1.5
   rotation 0 1 0 -1.5707953071795862
   position -1.5
@@ -263,8 +272,25 @@ Table {
   name "table(1)"
   size 1 0.74 1
 }
-Chair {
-  translation -4.5 0 2.5
+Table {
+  translation 0 0 3
+  name "table(3)"
+  size 1 0.8 1
+}
+DesktopComputer {
+  translation 0 0 3
+}
+ComputerMouse {
+  translation -0.3 0.8 2.8
+  rotation 0 1 0 1.5
+}
+Monitor {
+  translation -0.1 0.8 3
+  rotation 0 1 0 1.5
+}
+Pedestrian {
+  translation -1 1.27 3
+  rotation 0 1 0 1.5
 }
 Chair {
   translation -3.2 0 1.5
@@ -277,12 +303,20 @@ Can {
 WaterBottle {
   translation -3 0.738 1.65
 }
+Ball {
+  translation -2.84 0.802 2
+  radius 0.0385
+}
 BiscuitBox {
   translation -3.44 0.741 2.2
   rotation 0 1 0 2.3562003061004253
 }
 CardboardBox {
   translation 9.7 0.3 -4.7
+}
+WaterBottle {
+  translation 0.3 0.8 2.8
+  name "water bottle(1)"
 }
 CardboardBox {
   translation 9 0.3 -4.6
@@ -353,14 +387,6 @@ LandscapePainting {
 }
 PottedTree {
   translation 9.17 0 1.7
-}
-PottedTree {
-  translation -4.5 0 1
-  name "potted tree(1)"
-}
-PottedTree {
-  translation 4.4 0 -1.9
-  name "potted tree(2)"
 }
 PottedTree {
   translation 5.6 0 4.5
