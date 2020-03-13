@@ -11,10 +11,11 @@ SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
 	ComponentInstance Tiago instantiates ComponentWebotsRobot
 	{
 		ProvidedService BaseStateServiceOut
-		ProvidedService BatteryEventServiceOut
+
 		ProvidedService LocalizationUpdateServiceIn
 		ProvidedService NavigationVelocityServiceIn
 		ProvidedService BaseStateAnswerer
+	ProvidedService BatteryPushServiceOut
 	}
 	ComponentInstance TiagoObstacleAvoid instantiates ComponentLaserObstacleAvoid
 	{
