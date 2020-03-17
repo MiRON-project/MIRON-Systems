@@ -6,3 +6,5 @@ src-gen/
 __pycache__/
 /*/bin/
 .settings
+predeploy*
+startstop*

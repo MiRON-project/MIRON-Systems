@@ -13,5 +13,7 @@ DeploymentModel SystemWebotsTiagoCameraRecognition using ComponentArchitecture S
 	ComponentArtefact Tiago deploy-to PC1
 	ComponentArtefact TiagoCameraRecognition deploy-to PC1
 	ComponentArtefact TiagoLidar deploy-to PC1
-	ComponentArtefact TiagoObstacleAvoid deploy-to PC1
+
+	ComponentArtefact  SmartJoystickNavigation deploy-to PC1
+	ComponentArtefact SmartJoystickServer deploy-to PC1
 }
