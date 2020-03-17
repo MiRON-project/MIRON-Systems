@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.01990371891492952 -0.9594573526777179 -0.28115019182995593 3.1511380280906147
-  position -0.69619586028286 7.056098616446239 -9.179925271895328
+  orientation 0.013765277752586048 -0.9490177968738603 -0.3149217971895224 3.111778155541982
+  position -1.2591539476167635 8.971523965017957 -10.311423211551528
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -11,6 +11,7 @@ TexturedBackground {
   skybox FALSE
 }
 TiagoIron {
+  supervisor TRUE
   rotation 0.5773509358554485 0.5773509358554485 0.5773489358556708 -2.094395307179586
   controller "<extern>"
   cameraSlot [
@@ -37,6 +38,9 @@ TiagoIron {
     InertialUnit {
       rotation 0 -0.7071057811860166 0.7071077811853976 3.14159
       name "inertial unit 2"
+    }
+    GPS{
+
     }
     Robot {
       children [
@@ -70,6 +74,15 @@ Floor {
   appearance MattePaint {
     baseColor 0.605936 0.609995 0.601862
   }
+}
+WoodenBox {
+  translation 0 0.3 3
+  size 0.7 0.6 1
+}
+WoodenBox {
+  translation -3.2 0.3 2
+  name "wooden box(1)"
+  size 0.7 0.6 1
 }
 Floor {
   translation 7.5 0 0
@@ -277,9 +290,6 @@ Table {
   name "table(3)"
   size 1 0.8 1
 }
-DesktopComputer {
-  translation 0 0 3
-}
 ComputerMouse {
   translation -0.3 0.8 2.8
   rotation 0 1 0 1.5
@@ -291,14 +301,50 @@ Monitor {
 Pedestrian {
   translation -1 1.27 3
   rotation 0 1 0 1.5
+  name "jose"
 }
-Chair {
-  translation -3.2 0 1.5
-  rotation 0 1 0 -1.5708003061004252
-  name "chair(1)"
+Pedestrian {
+  translation 4.2 1.27 4.5
+  rotation 0 1 0 3.14
+  name "maria"
+  shirtColor 1 0 0
+  pantsColor 0 0 0
 }
 Can {
   translation -2.84 0.802 2.34
+}
+Charger {
+  translation -4.5 0 4.5
+  children [
+    Transform {
+      translation 0 0.15 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 0
+            transparency 0.2
+            roughness 0.2
+            metalness 0
+            emissiveColor 1 0 0
+          }
+          geometry DEF CHARGER_GEOM Cylinder {
+            height 0.3
+            radius 0.25
+            subdivision 24
+          }
+        }
+        PointLight {
+          attenuation 0 0 12
+          color 1 0 0
+          intensity 0.3
+        }
+      ]
+    }
+  ]
+  radius 0.25
+  battery [
+    100 100 1
+  ]
 }
 WaterBottle {
   translation -3 0.738 1.65
@@ -336,13 +382,6 @@ CardboardBox {
 Fridge {
   translation 5.7 0 -4.64
   rotation 0 -1 0 1.5708
-}
-FloorLight {
-  translation 4 0 4
-  bulbColor 0.360784 0.207843 0.4
-  pointLightColor 0.678431 0.498039 0.658824
-  pointLightIntensity 1.5
-  pointLightCastShadows TRUE
 }
 FloorLight {
   translation 8.84 0 -1
