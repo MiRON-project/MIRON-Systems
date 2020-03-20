@@ -48,5 +48,17 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 	}
 } 
 
+ComponentParameterInstance SmartJoystickNavigation refinesParamStruct SmartJoystickNavigationParameters
+{
+	ParameterRefinement Settings
+	{
+		/** Defines the maximum velocity. This is the velocity [m/s] which will be sent when the joystick axis is at full peak.  */
+		max_velocity = 5.0
+		
+		/** Defines the minimum steering angle. This is the angle [rad] which will be sent as omega when the joystick axis is at full peak. */
+		max_steering = 1.2
+	}
+}
+
 
 }
