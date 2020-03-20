@@ -13,4 +13,40 @@ SmartJoystickServerParameters
 			verbose = true
  }
  }
+
+ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams { 
+	ParameterRefinement lidar_properties {
+		enable = true
+	}
+	
+	ParameterRefinement battery_properties{
+		//@doc"Use custom battery estimation"
+		custom_battery = false
+		
+		//@doc"Defines the initial battery level."
+		battery_level_init = 100
+		
+		//@doc"Defines the max battery level."
+		battery_level_max = 100
+		
+		//@doc"Defines the min battery level to stop robot."
+		battery_level_min = 10
+		
+		//@doc"Defines the discharge battery rate."
+		cpu_consumption = 0.1
+		
+		//@doc"Defines the motor consumption Factor"
+		motor_consumption = 0.01
+	}
+	
+	ParameterRefinement camera_properties{
+		//@doc"Enable the Camera peripheral"
+		enable = true
+		
+		//@doc"Enable the Camera recognition"
+		enable_recognition = true
+	}
+} 
+
+
 }

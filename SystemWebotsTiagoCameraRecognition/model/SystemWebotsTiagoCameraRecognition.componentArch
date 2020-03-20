@@ -3,11 +3,7 @@ SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
 	ComponentInstance ComponentWebots instantiates ComponentWebots
 	{
 	}
-	ComponentInstance TiagoCameraRecognition instantiates ComponentWebotsCameraRecognition
-	{
-		RequiredService BaseStateServiceIn
-		ProvidedService RGBImagePushServiceOut
-	}
+
 	ComponentInstance Tiago instantiates ComponentWebotsRobot
 	{
 		ProvidedService BaseStateServiceOut
@@ -17,11 +13,6 @@ SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
 		ProvidedService BatteryPushServiceOut
 	}
 	
-	ComponentInstance TiagoLidar instantiates ComponentWebotsLidar
-	{
-		RequiredService BaseStateServiceIn
-		ProvidedService LaserServiceOut
-	}
 	ComponentInstance SmartJoystickNavigation instantiates SmartJoystickNavigation
 	{
 		RequiredService JoystickServiceIn
@@ -31,8 +22,6 @@ SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
 	{
 		ProvidedService JoystickServcieOut
 	}
-	Connection TiagoCameraRecognition.BaseStateServiceIn -> Tiago.BaseStateServiceOut
-	Connection TiagoLidar.BaseStateServiceIn -> Tiago.BaseStateServiceOut
-Connection SmartJoystickNavigation.NavVelServiceOut -> Tiago.NavigationVelocityServiceIn
+	Connection SmartJoystickNavigation.NavVelServiceOut -> Tiago.NavigationVelocityServiceIn
 	Connection SmartJoystickNavigation.JoystickServiceIn -> SmartJoystickServer.JoystickServcieOut
 }
