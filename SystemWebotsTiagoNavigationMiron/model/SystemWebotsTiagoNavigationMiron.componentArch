@@ -3,33 +3,23 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
     ComponentInstance ComponentWebots instantiates ComponentWebots
 	{
 	}
-	ComponentInstance ComponentKB instantiates ComponentKB
-	{
-		ProvidedService kbQuery
-	}
-	ComponentInstance ComponentSkillInterface instantiates ComponentSkillInterface
-	{
-		RequiredService kBQueryClient
-	}
-	ComponentInstance TiagoLidar instantiates ComponentWebotsLidar
-	{
-		RequiredService BaseStateServiceIn
-		ProvidedService LaserServiceOut
-	}
+
+
 	ComponentInstance SmartCdlServer instantiates SmartCdlServer
 	{
 		RequiredService LaserClient
 		RequiredService PlannerClient
-		RequiredService BaseStateClient
+
 		RequiredService NavVelSendClient
-	    ParameterStructInstance SystemWebotsTiagoNavigationMiron.SmartCdlServer
+	ParameterStructInstance SystemWebotsTiagoNavigationMiron.SmartCdlServer
 	}
 	ComponentInstance Tiago instantiates ComponentWebotsRobot
 	{
 		ProvidedService BaseStateServiceOut
-		ProvidedService BatteryEventServiceOut
 		ProvidedService LocalizationUpdateServiceIn
 		ProvidedService NavigationVelocityServiceIn
+		ProvidedService LaserServiceOut
+		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
 	{
@@ -52,19 +42,24 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	ComponentInstance ComponentTCLSequencer instantiates ComponentTCLSequencer
 	{
 	}
+	ComponentInstance ComponentSkillInterface instantiates ComponentSkillInterface
+	{
+		RequiredService kBQueryClient
+	}
+	ComponentInstance ComponentKB instantiates ComponentKB
+	{
+		ProvidedService kbQuery
+	}
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
-	Connection SmartCdlServer.LaserClient -> TiagoLidar.LaserServiceOut
-	Connection TiagoLidar.BaseStateServiceIn ->  Tiago.BaseStateServiceOut
+	Connection SmartCdlServer.LaserClient -> Tiago.LaserServiceOut
 	Connection SmartCdlServer.NavVelSendClient ->  Tiago.NavigationVelocityServiceIn
 	Connection SmartAmcl.LocalizationUpdateServiceOut ->  Tiago.LocalizationUpdateServiceIn
-	Connection SmartAmcl.LaserServiceIn -> TiagoLidar.LaserServiceOut
-	Connection SmartMapperGridMap.LaserServiceIn -> TiagoLidar.LaserServiceOut
+	Connection SmartAmcl.LaserServiceIn -> Tiago.LaserServiceOut
+	Connection SmartMapperGridMap.LaserServiceIn -> Tiago.LaserServiceOut
 	Connection SmartPlannerBreadthFirstSearch.CurMapClient -> SmartMapperGridMap.CurrMapOut
 	Connection SmartPlannerBreadthFirstSearch.BaseStateClient ->  Tiago.BaseStateServiceOut
 	Connection SmartCdlServer.PlannerClient -> SmartPlannerBreadthFirstSearch.PlannerGoalServer
-	Connection SmartCdlServer.BaseStateClient ->  Tiago.BaseStateServiceOut
-	
-	
+
 	BehaviorTaskRef NavTasks
 
 	CoordinationModuleMapping {

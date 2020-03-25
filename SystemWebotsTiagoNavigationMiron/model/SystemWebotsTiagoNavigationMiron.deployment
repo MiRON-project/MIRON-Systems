@@ -8,14 +8,13 @@ DeploymentModel SystemWebotsTiagoNavigationMiron using ComponentArchitecture Sys
 	NamingService
 	{
 		deploy-to PC1 }
+	ComponentArtefact SmartCdlServer deploy-to PC1
+	ComponentArtefact Tiago deploy-to PC1
+	ComponentArtefact ComponentWebots deploy-to PC1
+	ComponentArtefact SmartMapperGridMap deploy-to PC1
+	ComponentArtefact SmartPlannerBreadthFirstSearch deploy-to PC1
+	ComponentArtefact SmartAmcl deploy-to PC1
+	ComponentArtefact ComponentTCLSequencer deploy-to PC1
 	ComponentArtefact ComponentKB deploy-to PC1
 	ComponentArtefact ComponentSkillInterface deploy-to PC1
-	ComponentArtefact ComponentWebots deploy-to PC1
-	ComponentArtefact TiagoLidar deploy-to PC1
-	ComponentArtefact Tiago deploy-to PC1
-	ComponentArtefact SmartAmcl deploy-to PC1
-	ComponentArtefact SmartCdlServer deploy-to PC1
-	ComponentArtefact SmartMapperGridMap deploy-to PC1
-	ComponentArtefact ComponentTCLSequencer deploy-to PC1
-	ComponentArtefact SmartPlannerBreadthFirstSearch deploy-to PC1
 }
