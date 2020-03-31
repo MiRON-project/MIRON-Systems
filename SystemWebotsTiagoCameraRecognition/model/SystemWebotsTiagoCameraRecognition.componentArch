@@ -11,6 +11,7 @@ SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
 		ProvidedService NavigationVelocityServiceIn
 		ProvidedService BaseStateAnswerer
 		ProvidedService BatteryPushServiceOut
+	ProvidedService ObjectPushServiceOut
 	}
 	
 	ComponentInstance SmartJoystickNavigation instantiates SmartJoystickNavigation
@@ -22,6 +23,13 @@ SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
 	{
 		ProvidedService JoystickServcieOut
 	}
+	ComponentInstance PersonRecogn instantiates ComponentWebotsPersonRecognition
+	{
+		RequiredService ObjectPushServiceIn
+
+		ProvidedService PersonRecognitionServiceOut
+	}
 	Connection SmartJoystickNavigation.NavVelServiceOut -> Tiago.NavigationVelocityServiceIn
 	Connection SmartJoystickNavigation.JoystickServiceIn -> SmartJoystickServer.JoystickServcieOut
+Connection PersonRecogn.ObjectPushServiceIn -> Tiago.ObjectPushServiceOut
 }
