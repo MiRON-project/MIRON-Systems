@@ -16,4 +16,5 @@ DeploymentModel SystemWebotsTiagoCameraRecognition using ComponentArchitecture S
 
 	ComponentArtefact  SmartJoystickServer deploy-to PC1
 	ComponentArtefact SmartJoystickServer deploy-to PC1
+ComponentArtefact PersonRecogn deploy-to PC1
 }

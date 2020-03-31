@@ -3,6 +3,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="model"/>
 	<classpathentry kind="src" path="/ComponentWebots"/>
+	<classpathentry kind="src" path="/ComponentWebotsPersonRecognition"/>
 	<classpathentry kind="src" path="/ComponentWebotsRobot"/>
 	<classpathentry kind="src" path="/SmartJoystickNavigation"/>
 	<classpathentry kind="src" path="/SmartJoystickServer"/>

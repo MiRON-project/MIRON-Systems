@@ -4,6 +4,7 @@
 	<comment></comment>
 	<projects>
 		<project>ComponentWebots</project>
+		<project>ComponentWebotsPersonRecognition</project>
 		<project>ComponentWebotsRobot</project>
 		<project>SmartJoystickNavigation</project>
 		<project>SmartJoystickServer</project>
