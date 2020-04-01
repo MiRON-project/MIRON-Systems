@@ -11,6 +11,7 @@ TexturedBackground {
   skybox FALSE
 }
 TiagoIron {
+  translation 0 0.095 1
   rotation 0.5773509358554485 0.5773509358554485 0.5773489358556708 -2.094395307179586
   controller "<extern>"
   supervisor TRUE
@@ -204,7 +205,7 @@ Radiator {
   name "radiator(1)"
 }
 Door {
-  hidden translation_5 -0.29277307620383697 0 0.613270275588438
+  hidden translation_5 -0.29277307620383697 0 0.6132702755884379
   hidden rotation_5 0 -1 0 1.5
   translation 5 0 1.5
   rotation 0 1 0 -1.5707953071795862

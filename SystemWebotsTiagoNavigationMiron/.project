@@ -8,7 +8,6 @@
 		<project>ComponentSkillInterface</project>
 		<project>ComponentTCLSequencer</project>
 		<project>ComponentWebots</project>
-		<project>ComponentWebotsLidar</project>
 		<project>ComponentWebotsRobot</project>
 		<project>SmartAmcl</project>
 		<project>SmartCdlServer</project>
