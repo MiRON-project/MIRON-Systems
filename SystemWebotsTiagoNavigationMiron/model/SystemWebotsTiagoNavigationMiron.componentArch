@@ -19,6 +19,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService LocalizationUpdateServiceIn
 		ProvidedService NavigationVelocityServiceIn
 		ProvidedService LaserServiceOut
+		ProvidedService BaseStateAnswerer
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -81,6 +82,12 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	CoordinationModuleMapping {
 		moduleInstance NavTasks.localizationModInst realizedby locModRealization {
 			interfaceInstance amcl1 realizedby SmartAmcl
+		}
+	}
+	
+	CoordinationModuleMapping {
+		moduleInstance NavTasks.base realizedby baseInst {
+			interfaceInstance base realizedby Tiago
 		}
 	}
 }
