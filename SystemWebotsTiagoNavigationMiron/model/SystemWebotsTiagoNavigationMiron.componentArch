@@ -11,6 +11,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		RequiredService PlannerClient
 
 		RequiredService NavVelSendClient
+		RequiredService BaseStateClient
 	ParameterStructInstance SystemWebotsTiagoNavigationMiron.SmartCdlServer
 	}
 	ComponentInstance Tiago instantiates ComponentWebotsRobot
@@ -60,6 +61,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection SmartPlannerBreadthFirstSearch.CurMapClient -> SmartMapperGridMap.CurrMapOut
 	Connection SmartPlannerBreadthFirstSearch.BaseStateClient ->  Tiago.BaseStateServiceOut
 	Connection SmartCdlServer.PlannerClient -> SmartPlannerBreadthFirstSearch.PlannerGoalServer
+	Connection SmartCdlServer.BaseStateClient -> Tiago.BaseStateServiceOut
 
 	BehaviorTaskRef NavTasks
 
