@@ -46,6 +46,10 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 		//@doc"Enable the Camera recognition"
 		enable_recognition = true
 	}
+	
+	ParameterRefinement robot_properties{
+		wheel_distance = 0.54
+	}
 } 
 
 ComponentParameterInstance SmartJoystickNavigation refinesParamStruct SmartJoystickNavigationParameters
