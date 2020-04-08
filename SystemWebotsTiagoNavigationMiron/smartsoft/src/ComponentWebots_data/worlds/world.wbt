@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.7259861099678916 -0.6590060161538492 -0.19660935584737757 5.362622153709845
-  position 20.547893104132324 24.71034520747194 23.9597192466012
+  orientation 0.011437382340747357 -0.8850003375636537 -0.4654498778573376 3.115655669618519
+  position 1.1159962974003557 22.74554571419668 -14.640919109649444
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -12,15 +12,16 @@ TexturedBackground {
 }
 TiagoIron {
   translation 0 0.095 1
-  rotation 0.5773509358554485 0.5773509358554485 0.5773489358556708 -2.094395307179586
+  rotation 0.577350978618431 0.577350914473882 0.5773489144741784 -2.094395307179586
   controller "<extern>"
   supervisor TRUE
   lidarSlot [
     InertialUnit {
-      rotation 0 -0.7071057811860166 0.7071077811853976 3.14159
+      rotation 0 1 0 1.5707
       name "inertial unit 2"
     }
     GPS {
+      rotation 0 1 0 1.5707
     }
     Lidar {
       name "Hokuyo URG-04LX-UG01"
@@ -60,6 +61,11 @@ Floor {
   appearance MattePaint {
     baseColor 0.605936 0.609995 0.601862
   }
+}
+Floor {
+  translation 2 0.01 -1
+  name "goalPose"
+  size 1 1
 }
 Floor {
   translation 7.5 0 0
@@ -205,8 +211,6 @@ Radiator {
   name "radiator(1)"
 }
 Door {
-  hidden translation_5 -0.29277307620383697 0 0.6132702755884379
-  hidden rotation_5 0 -1 0 1.5
   translation 5 0 1.5
   rotation 0 1 0 -1.5707953071795862
   position -1.5
