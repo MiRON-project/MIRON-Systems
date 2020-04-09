@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.011437382340747357 -0.8850003375636537 -0.4654498778573376 3.115655669618519
-  position 1.1159962974003557 22.74554571419668 -14.640919109649444
+  orientation 0.01163060072690857 -0.8918802753551626 -0.4521220007466243 3.1160016958548997
+  position 0.9894999623578419 24.162841074719935 -16.41611037803599
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -63,11 +63,6 @@ Floor {
   }
 }
 Floor {
-  translation 2 0.01 -1
-  name "goalPose"
-  size 1 1
-}
-Floor {
   translation 7.5 0 0
   name "floor(1)"
   size 5 10
@@ -77,6 +72,11 @@ Floor {
       scale 0.6 0.6
     }
   }
+}
+Floor {
+  translation 1 0.01 -2
+  name "goalpose"
+  size 0.5 0.5
 }
 Bench {
   translation 1.5 0 -4.465
