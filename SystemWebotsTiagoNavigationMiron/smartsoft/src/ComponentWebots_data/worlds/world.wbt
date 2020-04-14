@@ -17,7 +17,6 @@ TiagoIron {
   supervisor TRUE
   lidarSlot [
     InertialUnit {
-      rotation 0 1 0 1.5707
       name "inertial unit 2"
     }
     GPS {
@@ -47,10 +46,6 @@ PottedTree {
 PottedTree {
   translation -2.63 0 -2.84
   name "potted tree(6)"
-}
-PottedTree {
-  translation 4 0 -3
-  name "potted tree(7)"
 }
 PottedTree {
   translation 5.8 0 -3.3
@@ -345,7 +340,7 @@ CeilingLight {
   pointLightCastShadows TRUE
 }
 Sofa {
-  translation 9 0 0.518
+  translation 4.2 0 -2.5
   rotation 0 1 0 3.141592653589793
 }
 Armchair {
@@ -364,7 +359,7 @@ PottedTree {
   name "potted tree(1)"
 }
 PottedTree {
-  translation 4.4 0 -1.9
+  translation 1 0 -1
   name "potted tree(2)"
 }
 PottedTree {

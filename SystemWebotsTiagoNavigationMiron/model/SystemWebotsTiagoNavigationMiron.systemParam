@@ -6,7 +6,19 @@ SystemParameterModel SystemWebotsTiagoNavigationMiron extendsSystem SystemWebots
     ParameterRefinement CurrentMap
     {
       growing = "star32"
+		xsize = 10000
+		ysize = 10000
+		xpos = -5000
+		ypos = -5000
     }
+    
+    ParameterRefinement LtmMap {
+		xsize = 10000
+		ysize = 10000
+		xpos = -5000
+		ypos = -5000
+	}
+    
   }
 ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams { 
 		ParameterRefinement lidar_properties {
