@@ -47,10 +47,10 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 	
 	ParameterRefinement camera_properties{
 		//@doc"Enable the Camera peripheral"
-		enable = false
+		enable = true
 		
 		//@doc"Enable the Camera recognition"
-		enable_recognition = false
+		enable_recognition = true
 	}
 	
 	ParameterRefinement robot_properties{
