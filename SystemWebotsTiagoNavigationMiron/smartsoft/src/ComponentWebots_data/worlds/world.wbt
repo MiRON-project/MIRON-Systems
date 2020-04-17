@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.01163060072690857 -0.8918802753551626 -0.4521220007466243 3.1160016958548997
-  position 0.9894999623578419 24.162841074719935 -16.41611037803599
+  orientation 0.010830555901198708 -0.8886222135985304 -0.4585120069944942 3.100430595425656
+  position 0.7514206256321082 22.60281110312823 -15.021452053232787
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -15,6 +15,20 @@ TiagoIron {
   rotation 0.577350978618431 0.577350914473882 0.5773489144741784 -2.094395307179586
   controller "<extern>"
   supervisor TRUE
+  cameraSlot [
+    Camera {
+      rotation 0 1 0 -1.57079632679
+      name "camera 2D"
+      fieldOfView 1.309
+      width 400
+      height 240
+      antiAliasing TRUE
+      recognition Recognition {
+        frameColor 0.929412 0.831373 0
+        frameThickness 3
+      }
+    }
+  ]
   lidarSlot [
     InertialUnit {
       name "inertial unit 2"
@@ -56,6 +70,9 @@ Floor {
   appearance MattePaint {
     baseColor 0.605936 0.609995 0.601862
   }
+}
+Pedestrian {
+  translation 4 1.27 0
 }
 Floor {
   translation 7.5 0 0

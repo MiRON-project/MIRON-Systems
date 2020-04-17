@@ -26,8 +26,7 @@ SystemComponentArchitecture SystemWebotsTiagoCameraRecognition
 	}
 	ComponentInstance PersonRecogn instantiates ComponentWebotsPersonRecognition
 	{
-		ProvidedService PersonRecognitionServiceOut
-	RequiredService ObjectsPushServiceIn
+		RequiredService ObjectsPushServiceIn
 	}
 	Connection SmartJoystickNavigation.NavVelServiceOut -> Tiago.NavigationVelocityServiceIn
 	Connection SmartJoystickNavigation.JoystickServiceIn -> SmartJoystickServer.JoystickServcieOut

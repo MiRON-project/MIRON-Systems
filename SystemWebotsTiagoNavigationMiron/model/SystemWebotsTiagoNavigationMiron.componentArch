@@ -21,6 +21,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService NavigationVelocityServiceIn
 		ProvidedService LaserServiceOut
 		ProvidedService BaseStateAnswerer
+		ProvidedService ObjectsPushServiceOut
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -52,6 +53,13 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	{
 		ProvidedService kbQuery
 	}
+	ComponentInstance PersonRecognition instantiates ComponentWebotsPersonRecognition
+	{
+		RequiredService ObjectsPushServiceIn
+		ProvidedService PeoplePushServiceOut 
+		ProvidedService PeopleEventServiceOut
+		ProvidedService PersonQueryServiceAnsw
+	}
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
 	Connection SmartCdlServer.LaserClient -> Tiago.LaserServiceOut
 	Connection SmartCdlServer.NavVelSendClient ->  Tiago.NavigationVelocityServiceIn
@@ -62,6 +70,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection SmartPlannerBreadthFirstSearch.BaseStateClient ->  Tiago.BaseStateServiceOut
 	Connection SmartCdlServer.PlannerClient -> SmartPlannerBreadthFirstSearch.PlannerGoalServer
 	Connection SmartCdlServer.BaseStateClient -> Tiago.BaseStateServiceOut
+	Connection PersonRecognition.ObjectsPushServiceIn -> Tiago.ObjectsPushServiceOut
 
 	BehaviorTaskRef NavTasks
 
