@@ -1,0 +1,23 @@
+{
+    "people": 
+	[
+		{
+			"id": 1,
+			"name":"Thomas", 
+			"color":
+			[
+				{"r":0.25, "g":0.55, "b":0.2, "dominance":0.5},
+				{"r":0.24, "g":0.25, "b":0.5, "dominance":0.5}
+			]
+		},
+		{
+			"id": 2,
+			"name":"Maria", 
+			"color":
+			[
+				{"r":1, "g":0, "b":0, "dominance":0.5},
+				{"r":0, "g":0, "b":0, "dominance":0.5}
+			]
+		}
+	]
+}

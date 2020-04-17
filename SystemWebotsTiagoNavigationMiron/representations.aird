@@ -64,6 +64,10 @@
     <semanticResources>platform:/resource/CommManipulatorObjects/model/CommManipulatorObjects.types</semanticResources>
     <semanticResources>platform:/resource/DomainVision/model/DomainVision.modes</semanticResources>
     <semanticResources>platform:/resource/ComponentWebotsRobot/model/ComponentWebotsRobot.skillRealization</semanticResources>
+    <semanticResources>platform:/resource/ComponentWebotsPersonRecognition/model/ComponentWebotsPersonRecognition.component</semanticResources>
+    <semanticResources>platform:/resource/ComponentWebotsPersonRecognition/model/ComponentWebotsPersonRecognition.skillRealization</semanticResources>
+    <semanticResources>platform:/resource/ComponentWebotsPersonRecognition/model/ComponentWebotsPersonRecognition.componentParameters</semanticResources>
+    <semanticResources>platform:/resource/CommObjectRecognitionObjects/model/CommObjectRecognitionObjects.skills</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_xGmWsF5FEeq09PtlWfQB-g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sirius.system.deployment.design/description/deployment.odesign#//@ownedViewpoints[name='DeploymentViewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_xG2OU15FEeq09PtlWfQB-g" name="SystemWebotsTiagoNavigationMironDeployment" repPath="#_xG0ZIF5FEeq09PtlWfQB-g">
@@ -964,9 +968,9 @@
             <children xmi:type="notation:Node" xmi:id="_eHREIH-dEeqxOtDmnhCTrg" type="5010">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_eHREIX-dEeqxOtDmnhCTrg" x="31" y="5"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_wgIR0H-dEeqxOtDmnhCTrg" type="3014" element="_wgA9E3-dEeqxOtDmnhCTrg">
-              <styles xmi:type="notation:ShapeStyle" xmi:id="_wgIR0X-dEeqxOtDmnhCTrg" fontName="Ubuntu"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wgIR0n-dEeqxOtDmnhCTrg"/>
+            <children xmi:type="notation:Node" xmi:id="_dVmJcIAHEeq7l6dewvImtA" type="3014" element="_dVgp5YAHEeq7l6dewvImtA">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_dVmJcYAHEeq7l6dewvImtA" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dVmJcoAHEeq7l6dewvImtA"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_eHQdFn-dEeqxOtDmnhCTrg" fontName="Ubuntu" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eHQdF3-dEeqxOtDmnhCTrg" x="287" y="42" width="30" height="30"/>
@@ -1637,7 +1641,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:CustomStyle" uid="_wgA9E3-dEeqxOtDmnhCTrg" showIcon="false" id="2wansw">
+        <ownedStyle xmi:type="diagram:CustomStyle" uid="_dVgp5YAHEeq7l6dewvImtA" showIcon="false" id="2wansw">
           <description xmi:type="style:CustomStyleDescription" href="platform:/plugin/org.sirius.system.componentArchitecture.design/description/componentArchitecture.odesign#//@ownedViewpoints[name='SystemArchitectureViewpoint']/@ownedRepresentations[name='SystemArchitectureDiagram']/@defaultLayer/@containerMappings[name='ComponentInstanceContainer']/@borderedNodeMappings[name='ProvidedServiceNode']/@conditionnalStyles.1/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sirius.system.componentArchitecture.design/description/componentArchitecture.odesign#//@ownedViewpoints[name='SystemArchitectureViewpoint']/@ownedRepresentations[name='SystemArchitectureDiagram']/@defaultLayer/@containerMappings[name='ComponentInstanceContainer']/@borderedNodeMappings[name='ProvidedServiceNode']"/>

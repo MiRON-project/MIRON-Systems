@@ -11,6 +11,7 @@ DeploymentModel SystemWebotsTiagoNavigationMiron using ComponentArchitecture Sys
 	ComponentArtefact SmartCdlServer deploy-to PC1
 	ComponentArtefact Tiago deploy-to PC1
 	ComponentArtefact ComponentWebots deploy-to PC1
+	ComponentArtefact PersonRecognition deploy-to PC1
 	ComponentArtefact SmartMapperGridMap deploy-to PC1
 	ComponentArtefact SmartPlannerBreadthFirstSearch deploy-to PC1
 	ComponentArtefact SmartAmcl deploy-to PC1

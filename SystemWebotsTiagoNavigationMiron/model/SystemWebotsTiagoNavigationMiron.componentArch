@@ -56,7 +56,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	ComponentInstance PersonRecognition instantiates ComponentWebotsPersonRecognition
 	{
 		RequiredService ObjectsPushServiceIn
-		ProvidedService PeoplePushServiceOut
+		ProvidedService PeoplePushServiceOut 
 		ProvidedService PeopleEventServiceOut
 		ProvidedService PersonQueryServiceAnsw
 	}
