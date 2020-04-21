@@ -31,10 +31,10 @@ TiagoIron {
   ]
   lidarSlot [
     InertialUnit {
+      rotation 0 1 0 1.5708
       name "inertial unit 2"
     }
     GPS {
-      rotation 0 1 0 1.5707
     }
     Lidar {
       name "Hokuyo URG-04LX-UG01"
