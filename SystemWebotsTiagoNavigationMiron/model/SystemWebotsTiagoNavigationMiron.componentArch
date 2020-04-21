@@ -9,10 +9,9 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	{
 		RequiredService LaserClient
 		RequiredService PlannerClient
-
 		RequiredService NavVelSendClient
 		RequiredService BaseStateClient
-	ParameterStructInstance SystemWebotsTiagoNavigationMiron.SmartCdlServer
+		ParameterStructInstance SystemWebotsTiagoNavigationMiron.SmartCdlServer
 	}
 	ComponentInstance Tiago instantiates ComponentWebotsRobot
 	{
@@ -99,6 +98,12 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	CoordinationModuleMapping {
 		moduleInstance NavTasks.base realizedby baseInst {
 			interfaceInstance base realizedby Tiago
+		}
+	}
+	
+	CoordinationModuleMapping {
+		moduleInstance NavTasks.personRecognition realizedby personRecognition {
+			interfaceInstance objrecog realizedby PersonRecognition
 		}
 	}
 }
