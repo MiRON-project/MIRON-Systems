@@ -21,6 +21,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService LaserServiceOut
 		ProvidedService BaseStateAnswerer
 		ProvidedService ObjectsPushServiceOut
+		ProvidedService RGBImagePushServiceOut
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -58,7 +59,9 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService PeoplePushServiceOut 
 		ProvidedService PeopleEventServiceOut
 		ProvidedService PersonQueryServiceAnsw
-	}
+	    RequiredService RGBImagePushServiceIn
+}
+
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
 	Connection SmartCdlServer.LaserClient -> Tiago.LaserServiceOut
 	Connection SmartCdlServer.NavVelSendClient ->  Tiago.NavigationVelocityServiceIn
@@ -70,6 +73,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection SmartCdlServer.PlannerClient -> SmartPlannerBreadthFirstSearch.PlannerGoalServer
 	Connection SmartCdlServer.BaseStateClient -> Tiago.BaseStateServiceOut
 	Connection PersonRecognition.ObjectsPushServiceIn -> Tiago.ObjectsPushServiceOut
+	Connection PersonRecognition.RGBImagePushServiceIn -> Tiago.RGBImagePushServiceOut
 
 	BehaviorTaskRef NavTasks
 
