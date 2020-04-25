@@ -106,8 +106,8 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	}
 	
 	CoordinationModuleMapping {
-		moduleInstance NavTasks.personRecognition realizedby personRecognition {
-			interfaceInstance objrecog realizedby PersonRecognition
+		moduleInstance NavTasks.detector realizedby personRecognition {
+			interfaceInstance personrecog realizedby PersonRecognition
 		}
 	}
 }
