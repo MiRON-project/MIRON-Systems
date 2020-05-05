@@ -1,6 +1,8 @@
 # SystemWebotsTiagoNavigationMiron
 
 ![Architecture](model/SystemWebotsTiagoNavigationMironComponentArchitecture.jpg)
+![Deployment](model/SystemWebotsTiagoNavigationMironDeployment.jpg)
+![Target](model/SystemWebotsTiagoNavigationMironTargetPlatform.jpg)
 
 System to test MiRON Engine with autonomous navigation and person recognition.
 
