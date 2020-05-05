@@ -413,3 +413,36 @@ DirectionPanel {
 BunchOfSunFlowers {
   translation 7.68 0.5 0.52
 }
+Charger {
+  translation 1 0 0
+  children [
+    Transform {
+      translation 0 0.15 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 1 0
+            transparency 0.2
+            roughness 0.2
+            metalness 0
+            emissiveColor 1 0 0
+          }
+          geometry DEF CHARGER_GEOM Cylinder {
+            height 0.05
+            radius 0.25
+            subdivision 24
+          }
+        }
+        PointLight {
+          attenuation 0 0 12
+          color 1 0 0
+          intensity 0.3
+        }
+      ]
+    }
+  ]
+  battery [
+    100, 100, 1
+  ]
+  radius 0.25
+}
