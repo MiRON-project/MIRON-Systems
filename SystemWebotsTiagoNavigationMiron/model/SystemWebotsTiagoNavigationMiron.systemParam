@@ -1,8 +1,7 @@
 SystemParameterModel SystemWebotsTiagoNavigationMiron extendsSystem SystemWebotsTiagoNavigationMiron
 {
   
- ComponentParameterInstance SmartMapperGridMap refinesParamStruct SmartMapperGridMapParams
-  {
+ ComponentParameterInstance SmartMapperGridMap refinesParamStruct SmartMapperGridMapParams {
     ParameterRefinement CurrentMap
     {
       growing = "star32"
@@ -21,11 +20,12 @@ SystemParameterModel SystemWebotsTiagoNavigationMiron extendsSystem SystemWebots
     
   }
 ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams { 
-		ParameterRefinement lidar_properties {
+	ParameterRefinement lidar_properties {
 		enable = true
+		bumper_threshold = 1.0
 	}
 	
-	ParameterRefinement battery_properties{
+	ParameterRefinement battery_properties {
 		//@doc"Use custom battery estimation"
 		custom_battery = true
 		
@@ -45,7 +45,7 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 		motor_consumption = 0.01
 	}
 	
-	ParameterRefinement camera_properties{
+	ParameterRefinement camera_properties {
 		//@doc"Enable the Camera peripheral"
 		enable = true
 		
@@ -57,6 +57,21 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 		wheel_distance = 0.54
 	}
 }
+ComponentParameterInstance ComponentWebotsObjectRecognition refinesParamStruct ComponentWebotsObjectRecognitionParams { 
+	ParameterRefinement object_properties {
+		object_bump_threshold = 1.0
+		object_bump_type = "chair"
+	}
+}
+
+ComponentParameterInstance PersonRecognition refinesParamStruct ComponentWebotsPersonRecognitionParams { 
+	ParameterRefinement recognition_properties {
+		people_bump_threshold = 1.0
+		person_bump_name = "Maria"
+		wanted_person_name = "Maria"
+	}
+}
+
  ComponentParameterInstance ComponentSkillInterface refinesParamStruct ComponentSkillInterfaceParams { }
  ComponentParameterInstance SmartCdlServer refinesParamStruct SmartCdlServerParams {
 	 ParameterRefinement Cdl
@@ -87,4 +102,4 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 			vmax = 1000.0
 		}
 }
- ComponentParameterInstance ComponentTCLSequencer refinesParamStruct ComponentTCLSequencerParams { } }
+}
