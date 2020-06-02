@@ -60,15 +60,15 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 ComponentParameterInstance ComponentWebotsObjectRecognition refinesParamStruct ComponentWebotsObjectRecognitionParams { 
 	ParameterRefinement object_properties {
 		object_bump_threshold = 1.0
-		object_bump_type = "chair"
+		object_bump_type = "watering can"
 	}
 }
 
 ComponentParameterInstance PersonRecognition refinesParamStruct ComponentWebotsPersonRecognitionParams { 
 	ParameterRefinement recognition_properties {
 		people_bump_threshold = 1.0
-		person_bump_name = "Maria"
-		wanted_person_name = "Maria"
+		person_bump_name = "Thomas"
+		wanted_person_name = "Thomas"
 	}
 }
 
