@@ -74,6 +74,17 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService ObjectEventBumpOut
 		ProvidedService ObjectsSimpleRecognitionPushServiceOut
 	}
+	ComponentInstance QoSMetricProvider instantiates QoSMetricProvider
+	{
+		RequiredService BumperEventServiceInRobotBump
+		RequiredService BatteryPushServiceInBatteryLevel
+		RequiredService BatteryPushServiceInBatteryCharging
+		RequiredService ObjectEventBumpInObjectBump
+		RequiredService PeopleEventBumpInPersonBump
+		RequiredService WantedPersonEventInWantedPersonFound
+		RequiredService PeopleEventServiceInPeopleInRoom
+		ProvidedService EstimateServiceOut
+	}
 
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
 	Connection SmartCdlServer.LaserClient -> Tiago.LaserServiceOut
@@ -90,6 +101,13 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection PersonRecognition.BaseStateServiceIn -> Tiago.BaseStateServiceOut
 	Connection ComponentWebotsObjectRecognition.ObjectsPushServiceIn -> Tiago.ObjectsPushServiceOut
 	Connection ComponentWebotsObjectRecognition.BaseStateServiceIn -> Tiago.BaseStateServiceOut
+	Connection QoSMetricProvider.ObjectEventBumpInObjectBump -> ComponentWebotsObjectRecognition.ObjectEventBumpOut
+	Connection QoSMetricProvider.BumperEventServiceInRobotBump -> Tiago.BumperEventServiceOut
+	Connection QoSMetricProvider.WantedPersonEventInWantedPersonFound -> PersonRecognition.WantedPersonServiceOut
+	Connection QoSMetricProvider.PeopleEventBumpInPersonBump -> PersonRecognition.PeopleEventBumpServiceOut
+	Connection QoSMetricProvider.BatteryPushServiceInBatteryLevel -> Tiago.BatteryPushServiceOut
+	Connection QoSMetricProvider.BatteryPushServiceInBatteryCharging -> Tiago.BatteryPushServiceOut
+	Connection QoSMetricProvider.PeopleEventServiceInPeopleInRoom -> PersonRecognition.PeopleEventServiceOut
 
 	BehaviorTaskRef NavTasks
 
