@@ -11,6 +11,7 @@
 		<project>ComponentWebotsObjectRecognition</project>
 		<project>ComponentWebotsPersonRecognition</project>
 		<project>ComponentWebotsRobot</project>
+		<project>QoSMetricProvider</project>
 		<project>SmartAmcl</project>
 		<project>SmartCdlServer</project>
 		<project>SmartMapperGridMap</project>
