@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.010830555901198708 -0.8886222135985304 -0.4585120069944942 3.100430595425656
-  position 0.7514206256321082 22.60281110312823 -15.021452053232787
+  orientation -0.3308611351188179 -0.8726526272258943 -0.3591772563284479 1.6761142347055036
+  position -16.439525187813064 17.79545797006767 2.852258238987052
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -49,10 +49,6 @@ TiagoIron {
   ]
 }
 PottedTree {
-  translation 0.53 0 4
-  name "potted tree(4)"
-}
-PottedTree {
   translation 7 0 4
   name "potted tree(5)"
 }
@@ -71,7 +67,7 @@ Floor {
   }
 }
 Pedestrian {
-  translation 4 1.27 0
+  translation -3 1.27 0
 }
 Floor {
   translation 7.5 0 0
@@ -373,10 +369,6 @@ PottedTree {
 PottedTree {
   translation -4.5 0 1
   name "potted tree(1)"
-}
-PottedTree {
-  translation 1 0 -1
-  name "potted tree(2)"
 }
 PottedTree {
   translation 5.6 0 4.5
