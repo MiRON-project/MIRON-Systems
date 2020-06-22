@@ -24,7 +24,8 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService RGBImagePushServiceOut
 		ProvidedService BatteryEventServiceOut
 		ProvidedService BatteryPushServiceOut
-		ProvidedService BumperEventServiceOut
+
+		ProvidedService SimpleBumperServiceOut
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -59,30 +60,32 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	ComponentInstance PersonRecognition instantiates ComponentWebotsPersonRecognition
 	{
 		RequiredService ObjectsPushServiceIn
-		ProvidedService PeoplePushServiceOut 
-		ProvidedService PeopleEventServiceOut
+
 		ProvidedService PersonQueryServiceAnsw
 	    RequiredService RGBImagePushServiceIn
 		RequiredService BaseStateServiceIn
-		ProvidedService PeopleEventBumpServiceOut
-		ProvidedService WantedPersonServiceOut
+		ProvidedService SimplePeopleBumpPushServiceOut
+		ProvidedService SimplePeoplePushServiceOut
+
+		ProvidedService SimpleWantedPeoplePushServiceOut
 	}
 	ComponentInstance ComponentWebotsObjectRecognition instantiates ComponentWebotsObjectRecognition
 	{
 		RequiredService BaseStateServiceIn
 		RequiredService ObjectsPushServiceIn
-		ProvidedService ObjectEventBumpOut
-		ProvidedService ObjectsSimpleRecognitionPushServiceOut
+
+		ProvidedService SimpleObjectBumpPushServiceOut
 	}
+
 	ComponentInstance QoSMetricProvider instantiates QoSMetricProvider
 	{
-		RequiredService BumperEventServiceInRobotBump
+		RequiredService SimplePeoplePushServiceInPeopleInRoom
+		RequiredService SimpleWantedPeoplePushServiceInWantedPersonFound
+		RequiredService SimpleBumperServiceInRobotBump
 		RequiredService BatteryPushServiceInBatteryLevel
 		RequiredService BatteryPushServiceInBatteryCharging
-		RequiredService ObjectEventBumpInObjectBump
-		RequiredService PeopleEventBumpInPersonBump
-		RequiredService WantedPersonEventInWantedPersonFound
-		RequiredService PeopleEventServiceInPeopleInRoom
+		RequiredService SimplePeopleBumpPushServiceInPersonBump
+		RequiredService SimpleObjectBumpPushServiceInObjectBump
 		ProvidedService EstimateServiceOut
 	}
 
@@ -101,13 +104,13 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection PersonRecognition.BaseStateServiceIn -> Tiago.BaseStateServiceOut
 	Connection ComponentWebotsObjectRecognition.ObjectsPushServiceIn -> Tiago.ObjectsPushServiceOut
 	Connection ComponentWebotsObjectRecognition.BaseStateServiceIn -> Tiago.BaseStateServiceOut
-	Connection QoSMetricProvider.ObjectEventBumpInObjectBump -> ComponentWebotsObjectRecognition.ObjectEventBumpOut
-	Connection QoSMetricProvider.BumperEventServiceInRobotBump -> Tiago.BumperEventServiceOut
-	Connection QoSMetricProvider.WantedPersonEventInWantedPersonFound -> PersonRecognition.WantedPersonServiceOut
-	Connection QoSMetricProvider.PeopleEventBumpInPersonBump -> PersonRecognition.PeopleEventBumpServiceOut
-	Connection QoSMetricProvider.BatteryPushServiceInBatteryLevel -> Tiago.BatteryPushServiceOut
+	Connection QoSMetricProvider.SimpleObjectBumpPushServiceInObjectBump -> ComponentWebotsObjectRecognition.SimpleObjectBumpPushServiceOut
+	Connection QoSMetricProvider.SimplePeopleBumpPushServiceInPersonBump -> PersonRecognition.SimplePeopleBumpPushServiceOut
+	Connection QoSMetricProvider.SimpleWantedPeoplePushServiceInWantedPersonFound -> PersonRecognition.SimpleWantedPeoplePushServiceOut
+	Connection QoSMetricProvider.SimplePeoplePushServiceInPeopleInRoom -> PersonRecognition.SimplePeoplePushServiceOut
 	Connection QoSMetricProvider.BatteryPushServiceInBatteryCharging -> Tiago.BatteryPushServiceOut
-	Connection QoSMetricProvider.PeopleEventServiceInPeopleInRoom -> PersonRecognition.PeopleEventServiceOut
+	Connection QoSMetricProvider.BatteryPushServiceInBatteryLevel -> Tiago.BatteryPushServiceOut
+	Connection QoSMetricProvider.SimpleBumperServiceInRobotBump -> Tiago.SimpleBumperServiceOut
 
 	BehaviorTaskRef NavTasks
 
