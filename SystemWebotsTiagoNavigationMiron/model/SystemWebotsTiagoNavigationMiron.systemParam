@@ -5,24 +5,24 @@ SystemParameterModel SystemWebotsTiagoNavigationMiron extendsSystem SystemWebots
     ParameterRefinement CurrentMap
     {
       growing = "star32"
-		xsize = 10000
-		ysize = 10000
-		xpos = -5000
-		ypos = -5000
+		xsize = 25000
+		ysize = 20000
+		xpos = 0
+		ypos = -20000
     }
     
     ParameterRefinement LtmMap {
-		xsize = 10000
-		ysize = 10000
-		xpos = -5000
-		ypos = -5000
+		xsize = 25000
+		ysize = 20000
+		xpos = 0
+		ypos = -20000
 	}
     
   }
 ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams { 
 	ParameterRefinement lidar_properties {
 		enable = true
-		bumper_threshold = 1.0
+		bumper_threshold = 0.01
 	}
 	
 	ParameterRefinement battery_properties {
@@ -39,7 +39,7 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 		battery_level_min = 10
 		
 		//@doc"Defines the discharge battery rate."
-		cpu_consumption = 0.1
+		cpu_consumption = 0.01
 		
 		//@doc"Defines the motor consumption Factor"
 		motor_consumption = 0.01
@@ -59,7 +59,7 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 }
 ComponentParameterInstance ComponentWebotsObjectRecognition refinesParamStruct ComponentWebotsObjectRecognitionParams { 
 	ParameterRefinement object_properties {
-		object_bump_threshold = 1.0
+		object_bump_threshold = 0.1
 		object_bump_type = "watering can"
 	}
 }
@@ -67,8 +67,8 @@ ComponentParameterInstance ComponentWebotsObjectRecognition refinesParamStruct C
 ComponentParameterInstance PersonRecognition refinesParamStruct ComponentWebotsPersonRecognitionParams { 
 	ParameterRefinement recognition_properties {
 		people_bump_threshold = 1.0
-		person_bump_name = "Thomas"
-		wanted_person_name = "Thomas"
+		person_bump_name = "THOMAS"
+		wanted_person_name = "THOMAS"
 	}
 }
 
