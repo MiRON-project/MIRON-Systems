@@ -3,7 +3,7 @@
 	[
 		{
 			"id": 1,
-			"name":"Thomas", 
+			"name":"THOMAS", 
 			"color":
 			[
 				{"r":0.25, "g":0.55, "b":0.2, "dominance":0.5},
@@ -12,7 +12,7 @@
 		},
 		{
 			"id": 2,
-			"name":"Maria", 
+			"name":"MARIA", 
 			"color":
 			[
 				{"r":1, "g":0, "b":0, "dominance":0.5},
