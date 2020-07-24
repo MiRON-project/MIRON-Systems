@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.820351148272828 -0.5507228729436059 -0.15403996476302348 1.0530113048669796
-  position -5.113493238613268 33.35619781655415 31.588594065368625
+  orientation -0.9568822803803116 -0.273922853476636 -0.09665698028281253 1.2798298172012992
+  position 3.9367942814243815 37.65137278883028 21.13160865747045
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -129,11 +129,12 @@ Floor {
   }
 }
 Pedestrian {
-  translation 4.66 1.27 11.85
+  translation 11.84 1.27 8.06856
+  rotation 0 1 0 0.523594
 }
 Pedestrian {
-  translation 11.93 1.27 7.60405
-  rotation 0 1 0 0.786194
+  translation 5.05473 1.27 7.39952
+  rotation 0 -1 0 -0.786195307179586
   name "pedestrian(1)"
   shirtColor 1 0 0
   pantsColor 1 0 0

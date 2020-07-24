@@ -22,7 +22,7 @@ SystemParameterModel SystemWebotsTiagoNavigationMiron extendsSystem SystemWebots
 ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams { 
 	ParameterRefinement lidar_properties {
 		enable = true
-		bumper_threshold = 0.01
+		bumper_threshold = 0.1
 	}
 	
 	ParameterRefinement battery_properties {
