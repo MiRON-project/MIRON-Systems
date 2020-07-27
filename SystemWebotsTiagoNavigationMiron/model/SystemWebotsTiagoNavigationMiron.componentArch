@@ -26,6 +26,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService BatteryPushServiceOut
 
 		ProvidedService SimpleBumperServiceOut
+		RequiredService ObjectPlacementPushServiceIn
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -88,6 +89,11 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		RequiredService SimpleObjectBumpPushServiceInObjectBump
 		ProvidedService EstimateServiceOut
 	}
+	ComponentInstance ComponentWebotsHRI instantiates ComponentWebotsHRI
+	{
+		ProvidedService ObjectPlacementPushServiceOut
+		ProvidedService ObjectPlacementQueryServiceAnsw
+	}
 
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
 	Connection SmartCdlServer.LaserClient -> Tiago.LaserServiceOut
@@ -111,6 +117,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection QoSMetricProvider.BatteryPushServiceInBatteryCharging -> Tiago.BatteryPushServiceOut
 	Connection QoSMetricProvider.BatteryPushServiceInBatteryLevel -> Tiago.BatteryPushServiceOut
 	Connection QoSMetricProvider.SimpleBumperServiceInRobotBump -> Tiago.SimpleBumperServiceOut
+	Connection Tiago.ObjectPlacementPushServiceIn -> ComponentWebotsHRI.ObjectPlacementPushServiceOut
 
 	BehaviorTaskRef NavTasks
 
@@ -145,6 +152,12 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	CoordinationModuleMapping {
 		moduleInstance NavTasks.detector realizedby personRecognition {
 			interfaceInstance personrecog realizedby PersonRecognition
+		}
+	}
+	
+	CoordinationModuleMapping {
+		moduleInstance NavTasks.speech realizedby hriModule {
+			interfaceInstance hri realizedby ComponentWebotsHRI
 		}
 	}
 }
