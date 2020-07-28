@@ -160,4 +160,6 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 			interfaceInstance hri realizedby ComponentWebotsHRI
 		}
 	}
+	
+	
 }
