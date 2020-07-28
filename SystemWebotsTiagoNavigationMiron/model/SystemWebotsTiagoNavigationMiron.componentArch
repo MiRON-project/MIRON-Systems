@@ -27,6 +27,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 
 		ProvidedService SimpleBumperServiceOut
 		RequiredService ObjectPlacementPushServiceIn
+		RequiredService ObjectDropPushServiceIn
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -93,6 +94,9 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	{
 		ProvidedService ObjectPlacementPushServiceOut
 		ProvidedService ObjectPlacementQueryServiceAnsw
+
+		ProvidedService ObjectDropQueryServiceAnsw
+	ProvidedService ObjectDropPushServiceOut
 	}
 
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
@@ -118,6 +122,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection QoSMetricProvider.BatteryPushServiceInBatteryLevel -> Tiago.BatteryPushServiceOut
 	Connection QoSMetricProvider.SimpleBumperServiceInRobotBump -> Tiago.SimpleBumperServiceOut
 	Connection Tiago.ObjectPlacementPushServiceIn -> ComponentWebotsHRI.ObjectPlacementPushServiceOut
+	Connection Tiago.ObjectDropPushServiceIn -> ComponentWebotsHRI.ObjectDropPushServiceOut
 
 	BehaviorTaskRef NavTasks
 
