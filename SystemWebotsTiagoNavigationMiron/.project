@@ -8,6 +8,7 @@
 		<project>ComponentSkillInterface</project>
 		<project>ComponentTCLSequencer</project>
 		<project>ComponentWebots</project>
+		<project>ComponentWebotsHRI</project>
 		<project>ComponentWebotsObjectRecognition</project>
 		<project>ComponentWebotsPersonRecognition</project>
 		<project>ComponentWebotsRobot</project>

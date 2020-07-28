@@ -56,6 +56,11 @@ ComponentParameterInstance Tiago refinesParamStruct ComponentWebotsRobotParams {
 	ParameterRefinement robot_properties{
 		wheel_distance = 0.54
 	}
+	
+	ParameterRefinement hri{
+		max_size=0.31
+		offset=[-0.3, 1.2, 0]
+	}
 }
 ComponentParameterInstance ComponentWebotsObjectRecognition refinesParamStruct ComponentWebotsObjectRecognitionParams { 
 	ParameterRefinement object_properties {
