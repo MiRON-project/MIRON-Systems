@@ -28,6 +28,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService SimpleBumperServiceOut
 		RequiredService ObjectPlacementPushServiceIn
 		RequiredService ObjectDropPushServiceIn
+		ProvidedService ObstaclesServiceOut
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -94,9 +95,13 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	{
 		ProvidedService ObjectPlacementPushServiceOut
 		ProvidedService ObjectPlacementQueryServiceAnsw
-
 		ProvidedService ObjectDropQueryServiceAnsw
-	ProvidedService ObjectDropPushServiceOut
+		ProvidedService ObjectDropPushServiceOut
+	}
+	ComponentInstance ComponentWebotsPlanner instantiates ComponentWebotsPlanner
+	{
+		RequiredService BaseStateServiceIn
+		RequiredService ObstaclesServiceIn
 	}
 
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
@@ -123,6 +128,8 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection QoSMetricProvider.SimpleBumperServiceInRobotBump -> Tiago.SimpleBumperServiceOut
 	Connection Tiago.ObjectPlacementPushServiceIn -> ComponentWebotsHRI.ObjectPlacementPushServiceOut
 	Connection Tiago.ObjectDropPushServiceIn -> ComponentWebotsHRI.ObjectDropPushServiceOut
+	Connection ComponentWebotsPlanner.ObstaclesServiceIn -> Tiago.ObstaclesServiceOut
+	Connection ComponentWebotsPlanner.BaseStateServiceIn -> Tiago.BaseStateServiceOut
 
 	BehaviorTaskRef NavTasks
 

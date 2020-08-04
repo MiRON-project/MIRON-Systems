@@ -10,6 +10,7 @@
 	<classpathentry kind="src" path="/ComponentWebotsHRI"/>
 	<classpathentry kind="src" path="/ComponentWebotsObjectRecognition"/>
 	<classpathentry kind="src" path="/ComponentWebotsPersonRecognition"/>
+	<classpathentry kind="src" path="/ComponentWebotsPlanner"/>
 	<classpathentry kind="src" path="/ComponentWebotsRobot"/>
 	<classpathentry kind="src" path="/QoSMetricProvider"/>
 	<classpathentry kind="src" path="/SmartAmcl"/>

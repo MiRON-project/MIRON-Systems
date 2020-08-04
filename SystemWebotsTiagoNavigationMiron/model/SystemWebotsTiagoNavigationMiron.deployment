@@ -21,4 +21,5 @@ DeploymentModel SystemWebotsTiagoNavigationMiron using ComponentArchitecture Sys
 	ComponentArtefact ComponentWebotsObjectRecognition deploy-to PC1
 	ComponentArtefact QoSMetricProvider deploy-to PC1
 	ComponentArtefact ComponentWebotsHRI deploy-to PC1
+ComponentArtefact ComponentWebotsPlanner deploy-to PC1
 }

@@ -107,4 +107,4 @@ ComponentParameterInstance PersonRecognition refinesParamStruct ComponentWebotsP
 			vmax = 1000.0
 		}
 }
-}
+ComponentParameterInstance ComponentWebotsPlanner refinesParamStruct ComponentWebotsPlanner { } }
