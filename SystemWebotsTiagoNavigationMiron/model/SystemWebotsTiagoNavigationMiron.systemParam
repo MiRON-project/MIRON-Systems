@@ -5,16 +5,16 @@ SystemParameterModel SystemWebotsTiagoNavigationMiron extendsSystem SystemWebots
     ParameterRefinement CurrentMap
     {
       growing = "star32"
-		xsize = 25000
-		ysize = 20000
-		xpos = 0
+		xsize = 40000
+		ysize = 40000
+		xpos = -20000
 		ypos = -20000
     }
     
     ParameterRefinement LtmMap {
-		xsize = 25000
-		ysize = 20000
-		xpos = 0
+		xsize = 40000
+		ysize = 40000
+		xpos = -20000
 		ypos = -20000
 	}
     
@@ -105,6 +105,6 @@ ComponentParameterInstance PersonRecognition refinesParamStruct ComponentWebotsP
     ParameterRefinement TRANSVEL {
 			vmin = -1000.0
 			vmax = 1000.0
-		}
+	}
 }
 ComponentParameterInstance ComponentWebotsPlanner refinesParamStruct ComponentWebotsPlanner { } }
