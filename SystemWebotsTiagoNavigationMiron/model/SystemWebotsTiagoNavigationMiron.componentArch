@@ -11,6 +11,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		RequiredService PlannerClient
 		RequiredService NavVelSendClient
 		RequiredService BaseStateClient
+		RequiredService PathNavigationGoalClient
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.SmartCdlServer
 	}
 	ComponentInstance Tiago instantiates ComponentWebotsRobot
@@ -28,6 +29,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService SimpleBumperServiceOut
 		RequiredService ObjectPlacementPushServiceIn
 		RequiredService ObjectDropPushServiceIn
+		ProvidedService ObstaclesServiceOut
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -62,20 +64,17 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	ComponentInstance PersonRecognition instantiates ComponentWebotsPersonRecognition
 	{
 		RequiredService ObjectsPushServiceIn
-
 		ProvidedService PersonQueryServiceAnsw
 	    RequiredService RGBImagePushServiceIn
 		RequiredService BaseStateServiceIn
 		ProvidedService SimplePeopleBumpPushServiceOut
 		ProvidedService SimplePeoplePushServiceOut
-
 		ProvidedService SimpleWantedPeoplePushServiceOut
 	}
 	ComponentInstance ComponentWebotsObjectRecognition instantiates ComponentWebotsObjectRecognition
 	{
 		RequiredService BaseStateServiceIn
 		RequiredService ObjectsPushServiceIn
-
 		ProvidedService SimpleObjectBumpPushServiceOut
 	}
 
@@ -94,9 +93,15 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	{
 		ProvidedService ObjectPlacementPushServiceOut
 		ProvidedService ObjectPlacementQueryServiceAnsw
-
 		ProvidedService ObjectDropQueryServiceAnsw
-	ProvidedService ObjectDropPushServiceOut
+		ProvidedService ObjectDropPushServiceOut
+	}
+	ComponentInstance ComponentWebotsPlanner instantiates ComponentWebotsPlanner
+	{
+		RequiredService BaseStateServiceIn
+		RequiredService ObstaclesServiceIn
+		ProvidedService PathNavigationGoalServiceOut
+		ProvidedService PlannerWaypointsQueryServiceAnsw
 	}
 
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
@@ -123,6 +128,8 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection QoSMetricProvider.SimpleBumperServiceInRobotBump -> Tiago.SimpleBumperServiceOut
 	Connection Tiago.ObjectPlacementPushServiceIn -> ComponentWebotsHRI.ObjectPlacementPushServiceOut
 	Connection Tiago.ObjectDropPushServiceIn -> ComponentWebotsHRI.ObjectDropPushServiceOut
+	Connection ComponentWebotsPlanner.ObstaclesServiceIn -> Tiago.ObstaclesServiceOut
+	Connection ComponentWebotsPlanner.BaseStateServiceIn -> Tiago.BaseStateServiceOut
 
 	BehaviorTaskRef NavTasks
 
@@ -139,6 +146,13 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 			interfaceInstance cdl realizedby SmartCdlServer
 			interfaceInstance mapper realizedby SmartMapperGridMap
 			interfaceInstance planner realizedby SmartPlannerBreadthFirstSearch
+		}
+	}
+	
+	CoordinationModuleMapping {
+		moduleInstance NavTasks.nav2 realizedby Planner
+		{
+			interfaceInstance plannercoord realizedby ComponentWebotsPlanner
 		}
 	}
 
