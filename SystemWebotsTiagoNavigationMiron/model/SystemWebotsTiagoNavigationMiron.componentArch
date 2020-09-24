@@ -102,6 +102,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		RequiredService ObstaclesServiceIn
 		ProvidedService PathNavigationGoalServiceOut
 		ProvidedService PlannerWaypointsQueryServiceAnsw
+	RequiredService ObjectsPushServiceIn
 	}
 
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
@@ -130,6 +131,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection Tiago.ObjectDropPushServiceIn -> ComponentWebotsHRI.ObjectDropPushServiceOut
 	Connection ComponentWebotsPlanner.ObstaclesServiceIn -> Tiago.ObstaclesServiceOut
 	Connection ComponentWebotsPlanner.BaseStateServiceIn -> Tiago.BaseStateServiceOut
+	Connection ComponentWebotsPlanner.ObjectsPushServiceIn -> Tiago.ObjectsPushServiceOut
 
 	BehaviorTaskRef NavTasks
 
