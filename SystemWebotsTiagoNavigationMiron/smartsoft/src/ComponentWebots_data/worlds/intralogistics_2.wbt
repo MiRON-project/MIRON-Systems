@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.5391110037262262 0.6905878584314918 0.4821283391881322 4.303944427315318
-  position -9.280783675767049 31.203611948978782 1.9504138171003633
+  orientation 0.5446080457606995 0.6777504090080074 0.49402070764512546 4.275427070747606
+  position -8.486735811805483 31.038717780677928 1.9833555490832941
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -206,7 +206,7 @@ WoodenBox {
   size 0.3 0.3 0.3
 }
 WoodenBox {
-  translation 4.83985 0.3 3.07858
+  translation 4.83985 0.3 2.50858
   rotation 0 1 0 1.5708
   name "wooden box(27)"
   size 0.3 0.3 0.3
@@ -232,7 +232,7 @@ WoodenBox {
   name "wooden box(24)"
 }
 WoodenBox {
-  translation 6.2 0.3 3.09
+  translation 6.2 0.3 2.48
   name "wooden box(26)"
 }
 WoodenBox {
@@ -511,31 +511,31 @@ Pedestrian {
   pantsColor 0.678431 0.498039 0.658824
 }
 Pedestrian {
-  translation 5.34743 1.27 3.06085
+  translation 5.34743 1.27 2.49085
   rotation 0 1 0 -1.5707953071795862
   name "JUAN"
   shirtColor 0.756863 0.490196 0.0666667
 }
 Pedestrian {
-  translation 4.08743 1.27 1.56085
+  translation 6.94743 1.27 1.56085
   rotation 0 1 0 3.14159
   name "TALK2"
   shirtColor 0 0 0
 }
 Pedestrian {
-  translation 3.39743 1.27 1.17085
+  translation 6.09743 1.27 0.94085
   rotation 0 -1 0 -1.5707953071795862
   name "TALK3"
   shirtColor 0 0 0
 }
 Pedestrian {
-  translation 4.07743 1.27 0.80085
+  translation 6.96743 1.27 0.39085
   rotation 0 1 0 7.73713e-07
   name "TALK1"
   shirtColor 0 0 0
 }
 Charger {
-  translation -9.33 0 11.82
+  translation -9.33 0 2.17
   children [
     Transform {
       translation 0 0.15 0
