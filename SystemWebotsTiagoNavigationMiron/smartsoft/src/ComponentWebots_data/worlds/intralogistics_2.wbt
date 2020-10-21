@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.5446080457606995 0.6777504090080074 0.49402070764512546 4.275427070747606
-  position -8.486735811805483 31.038717780677928 1.9833555490832941
+  orientation 0.4740911641849698 0.7679936181205451 0.4306081403873528 4.3762052684472525
+  position -12.995647433642185 25.25495746584964 2.209214665076474
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -134,27 +134,81 @@ WoodenBox {
   name "wooden box(2)"
 }
 WoodenBox {
-  translation 6.27112 0.3 6.72987
+  translation 5.93174 0.3 6.39049
   rotation 0 1 0 0.78539816
   name "wooden box(3)"
   size 0.3 0.3 0.3
 }
 WoodenBox {
-  translation 6.27112 1.69 7.70987
+  translation 5.22112 0.19 7.70987
   rotation 0 1 0 1.5708
   name "wooden box(15)"
   size 0.3 0.3 0.3
 }
 WoodenBox {
-  translation 6.64112 1.69 7.70987
+  translation 5.96112 1.69 7.70987
   rotation 0 1 0 1.5708
   name "wooden box(16)"
   size 0.3 0.3 0.3
 }
 WoodenBox {
-  translation 5.87112 1.69 7.70987
+  translation 5.87112 0.18 7.70987
   rotation 0 1 0 1.5708
   name "wooden box(17)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.75112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(28)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.29112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(29)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.78112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(30)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.30112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(31)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.30112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(32)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.73112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(33)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.21112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(34)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.62112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(35)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 5.13112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(36)"
   size 0.3 0.3 0.3
 }
 WoodenBox {
@@ -287,7 +341,7 @@ Cabinet {
   ]
 }
 Cabinet {
-  translation 5 0 8
+  translation 5.5 0 8
   rotation 0 1 0 3.14159
   name "cabinet(2)"
   rowsHeights [
@@ -304,7 +358,7 @@ Cabinet {
   ]
 }
 Cabinet {
-  translation 5 0 4
+  translation 5.5 0 4
   rotation 0 1 0 3.14159
   name "cabinet(4)"
   rowsHeights [
@@ -321,7 +375,7 @@ Cabinet {
   ]
 }
 Cabinet {
-  translation 5 0 0
+  translation 5.5 0 0
   rotation 0 1 0 3.14159
   name "cabinet(6)"
   rowsHeights [
@@ -493,7 +547,7 @@ Solid {
   name "solid(3)"
 }
 Pedestrian {
-  translation 6.6933 1.27 7.06678
+  translation 6.19838 1.27 6.91124
   rotation 0 1 0 -2.3561953071795863
   name "THOMAS"
 }
@@ -511,8 +565,8 @@ Pedestrian {
   pantsColor 0.678431 0.498039 0.658824
 }
 Pedestrian {
-  translation 5.34743 1.27 2.49085
-  rotation 0 1 0 -1.5707953071795862
+  translation 5.4 1.27 3
+  rotation 0 1 0 4
   name "JUAN"
   shirtColor 0.756863 0.490196 0.0666667
 }
