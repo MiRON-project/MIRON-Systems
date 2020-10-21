@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.5775903805001805 0.6486438798026433 0.4956313847490195 4.287168527825794
-  position 2.7232770312558605 18.332338548814842 4.8662874676669805
+  orientation 0.4740911641849698 0.7679936181205451 0.4306081403873528 4.3762052684472525
+  position -12.995647433642185 25.25495746584964 2.209214665076474
   follow "TIAGo Iron"
 }
 TexturedBackground {
@@ -155,6 +155,60 @@ WoodenBox {
   translation 5.87112 0.18 7.70987
   rotation 0 1 0 1.5708
   name "wooden box(17)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.75112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(28)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.29112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(29)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.78112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(30)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.30112 0.18 7.70987
+  rotation 0 1 0 1.5708
+  name "wooden box(31)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.30112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(32)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 3.73112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(33)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.21112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(34)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 4.62112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(35)"
+  size 0.3 0.3 0.3
+}
+WoodenBox {
+  translation 5.13112 0.18 3.65987
+  rotation 0 1 0 1.5708
+  name "wooden box(36)"
   size 0.3 0.3 0.3
 }
 WoodenBox {
