@@ -30,6 +30,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		RequiredService ObjectPlacementPushServiceIn
 		RequiredService ObjectDropPushServiceIn
 		ProvidedService ObstaclesServiceOut
+		ProvidedService PayloadServiceOut
 		ParameterStructInstance SystemWebotsTiagoNavigationMiron.Tiago
 	}
 	ComponentInstance SmartAmcl instantiates SmartAmcl
@@ -70,6 +71,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService SimplePeopleBumpPushServiceOut
 		ProvidedService SimplePeoplePushServiceOut
 		ProvidedService SimpleWantedPeoplePushServiceOut
+	ProvidedService PeoplePushServiceOut
 	}
 	ComponentInstance ComponentWebotsObjectRecognition instantiates ComponentWebotsObjectRecognition
 	{
@@ -88,6 +90,8 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		RequiredService SimplePeopleBumpPushServiceInPersonBump
 		RequiredService SimpleObjectBumpPushServiceInObjectBump
 		ProvidedService EstimateServiceOut
+	RequiredService PayloadServiceIn
+	RequiredService PeoplePushServiceIn
 	}
 	ComponentInstance ComponentWebotsHRI instantiates ComponentWebotsHRI
 	{
@@ -132,6 +136,8 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection ComponentWebotsPlanner.ObstaclesServiceIn -> Tiago.ObstaclesServiceOut
 	Connection ComponentWebotsPlanner.BaseStateServiceIn -> Tiago.BaseStateServiceOut
 	Connection ComponentWebotsPlanner.ObjectsPushServiceIn -> Tiago.ObjectsPushServiceOut
+	Connection QoSMetricProvider.PayloadServiceIn -> Tiago.PayloadServiceOut
+	Connection QoSMetricProvider.PeoplePushServiceIn -> PersonRecognition.PeoplePushServiceOut
 
 	BehaviorTaskRef NavTasks
 
