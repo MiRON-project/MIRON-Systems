@@ -92,6 +92,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService EstimateServiceOut
 	RequiredService PayloadServiceIn
 	RequiredService PeoplePushServiceIn
+	RequiredService DistanceToGoalServiceIn
 	}
 	ComponentInstance ComponentWebotsHRI instantiates ComponentWebotsHRI
 	{
@@ -107,6 +108,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 		ProvidedService PathNavigationGoalServiceOut
 		ProvidedService PlannerWaypointsQueryServiceAnsw
 	RequiredService ObjectsPushServiceIn
+	ProvidedService DistanceToGoalServiceOut
 	}
 
 	Connection ComponentSkillInterface.kBQueryClient -> ComponentKB.kbQuery
@@ -138,6 +140,7 @@ SystemComponentArchitecture SystemWebotsTiagoNavigationMiron
 	Connection ComponentWebotsPlanner.ObjectsPushServiceIn -> Tiago.ObjectsPushServiceOut
 	Connection QoSMetricProvider.PayloadServiceIn -> Tiago.PayloadServiceOut
 	Connection QoSMetricProvider.PeoplePushServiceIn -> PersonRecognition.PeoplePushServiceOut
+	Connection QoSMetricProvider.DistanceToGoalServiceIn -> ComponentWebotsPlanner.DistanceToGoalServiceOut
 
 	BehaviorTaskRef NavTasks
 
